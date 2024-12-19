@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prefix & Postfix Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <i class="fas fa-calculator"></i>
+                <h2>Prefix & Postfix Calculator</h2>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#calculator">Calculator</a></li>
+                    <li><a href="#guide">Guide</a></li>
+                    <li><a href="#examples">Examples</a></li>
+                </ul>
+            </nav>
+            <button id="darkModeToggle" class="dark-mode-btn" aria-label="Toggle Dark Mode">
+                Switch to Dark Mode
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Calculator Section -->
+        <section id="calculator" class="calculator-container">
+            <div class="calculator">
+                <h2>Calculator</h2>
+                <div class="stack-container" id="stackContainer" aria-live="polite">
+                    <!-- Stack items will be dynamically added/removed here -->
+                </div>
+                
+                <input 
+                    type="text" 
+                    id="expression-input" 
+                    class="calculator-screen" 
+                    placeholder="Enter Prefix or Postfix Expression"
+                    aria-label="Expression Input"
+                >
+                <div class="button-grid">
+                    <button id="btn-add" aria-label="Add Operator (+)">+</button>
+                    <button id="btn-subtract" aria-label="Subtract Operator (-)">-</button>
+                    <button id="btn-multiply" aria-label="Multiply Operator (*)">*</button>
+                    <button id="btn-divide" aria-label="Divide Operator (/)">/</button>
+                    <button id="btn-1" aria-label="Number 1">1</button>
+                    <button id="btn-2" aria-label="Number 2">2</button>
+                    <button id="btn-3" aria-label="Number 3">3</button>
+                    <button id="btn-space" aria-label="Insert Space">Space</button>
+                    <button id="btn-4" aria-label="Number 4">4</button>
+                    <button id="btn-5" aria-label="Number 5">5</button>
+                    <button id="btn-6" aria-label="Number 6">6</button>
+                    <button id="btn-clear" aria-label="Clear Input">C</button>
+                    <button id="btn-7" aria-label="Number 7">7</button>
+                    <button id="btn-8" aria-label="Number 8">8</button>
+                    <button id="btn-9" aria-label="Number 9">9</button>
+                    <button id="btn-prefix" aria-label="Evaluate Prefix">Prefix</button>
+                    <button id="btn-0" aria-label="Number 0">0</button>
+                    <button id="btn-postfix" aria-label="Evaluate Postfix">Postfix</button>
+                    <button id="btn-clear-result" aria-label="Clear Result">Clear Result</button>
+                    <button id="btn-reset" class="reset-btn" aria-label="Reset Calculator">Reset</button>
+                </div>
+                <div id="result" class="result-display">
+                    <p><span id="result-text">Result will appear here</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="guide">
+            <h2>Usage Guide</h2>
+            <p>This calculator supports evaluating prefix and postfix expressions. Use the respective input fields to enter the expressions and click the relevant button to compute the result.</p>
+            <h3>Valid Operators</h3>
+            <dl>
+                <dt>+</dt><dd>Addition</dd>
+                <dt>-</dt><dd>Subtraction</dd>
+                <dt>*</dt><dd>Multiplication</dd>
+                <dt>/</dt><dd>Division</dd>
+            </dl>
+        </section>
+
+        <!-- Examples Section -->
+        <section id="examples" class="examples">
+            <h2>Examples</h2>
+            <div>
+                <h3>Prefix</h3>
+                <ul>
+                    <li><code>+ 3 5</code> (Result: 8)</li>
+                    <li><code>* + 2 3 4</code> (Result: 20)</li>
+                    <li><code>+ 1 * 2 3</code> (Result: 7)</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Postfix</h3>
+                <ul>
+                    <li><code>3 5 +</code> (Result: 8)</li>
+                    <li><code>2 3 + 4 *</code> (Result: 20)</li>
+                    <li><code>1 2 3 * +</code> (Result: 7)</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Prefix & Postfix Calculator</p>
+    </footer>
+</body>
+</html>

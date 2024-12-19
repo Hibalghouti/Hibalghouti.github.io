@@ -43,7 +43,4 @@ You can try the live version of the Prefix and Postfix Calculator at the followi
 
 
 
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
 
